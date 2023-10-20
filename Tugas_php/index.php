@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo "Tugas PHP" ?></title>
-</head>
-
-<body>
   <?php
 
   //Tugas 1 Membuat Output Bilangan Ganjil Genap
@@ -58,6 +49,3 @@
     echo "Nilai Anda Kurang Dari 60";
   }
   ?>
-</body>
-
-</html>
