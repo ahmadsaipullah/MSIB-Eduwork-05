@@ -50,24 +50,20 @@
             <ul class="list-unstyled text-white">
               <li>
                 <p>
-                  <i class="fas fa-home mr-3"></i> New York, NY 10012, US
+                  <i class="fas fa-home mr-3"></i> Cipondoh Kota Tangerang, Banten
                 </p>
               </li>
               <li>
                 <p>
-                  <i class="fas fa-envelope mr-3"></i> info@example.com
+                  <i class="fas fa-envelope mr-3"></i> ahmadsaipullah140@gmail.com
                 </p>
               </li>
               <li>
                 <p>
-                  <i class="fas fa-phone mr-3"></i> + 01 234 567 88
+                  <i class="fas fa-phone mr-3"></i> +6287880182823
                 </p>
               </li>
-              <li>
-                <p>
-                  <i class="fas fa-print mr-3"></i> + 01 234 567 89
-                </p>
-              </li>
+
             </ul>
 
           </div>

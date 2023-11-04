@@ -7,16 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pepustakaan</title>
     <?php
+    session_start();
     // css
     @include("include/style.php");
     // koneksi database
     @include("include/conncet.php");
     // proses query data
-    $book = mysqli_query($sqli, "SELECT buku. *, katalog.nama as nama_katalog, penerbit.nama_penerbit, pengarang.nama_pengarang FROM buku
-    LEFT JOIN katalog ON katalog.id_katalog = buku.id_katalog
-    LEFT JOIN penerbit ON penerbit.id_penerbit = buku.id_penerbit
-    LEFT JOIN pengarang ON pengarang.id_pengarang = buku.id_pengarang 
-    ORDER BY judul ASC");
+    @include("page/controller/home.php");
     ?>
 </head>
 
@@ -25,16 +22,29 @@
     @include("include/navbar.php");
     ?>
 
-    <?php
-    if (isset($_SESSION['gagal'])) {
-    }
-
-    ?>
     <!-- section -->
     <div class="container section-navbar">
+        <div class="header">
+            <h2 class="text-center">Data Buku Perpustakaan</h2>
+        </div>
+        <!-- Alert -->
+        <?php
+        if (isset($_SESSION['status'])) { ?>
+            <div class="alert alert-<?= $_SESSION['message'] ?> alert-dismissible fade show" role="alert">
+                <strong>Hey! </strong> <?php echo $_SESSION['message']; ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <?php
+                echo $_SESSION['status'];
+                unset($_SESSION['status']);
+                ?>
+            </div>
+        <?php
+        }
+        ?>
+        <!-- endAlert -->
         <div class="row">
             <div class="col-md-12">
-                <a href="page/home/create.php" class="btn btn-primary mb-2">Add New Buku</a>
+                <a href="page/home/create.php" class="btn btn-primary mb-2">Tambah Buku Baru</a>
                 <table class="table table-striped text-center bg-light" border="2">
                     <thead class="fw-bold">
                         <tr>
@@ -65,7 +75,7 @@
                         <td>" . $books['nama_pengarang'] . "</td>
                         <td>" . $books['nama_katalog'] . "</td>
                         <td>" . $books['qty_stok'] . "</td>
-                        <td>" . $books['harga_pinjam'] . "</td>
+                        <td>" . number_format($books['harga_pinjam']) . "</td>
                         <td>
                         <a href='page/home/edit.php?isbn=" . $books['isbn'] . " 'class=' btn btn-warning'>Edit</a>
                         <a href='#' class=' btn btn-danger' onclick='confirmation(`" . $books['isbn'] . "`)' >Delete</a>
@@ -79,7 +89,8 @@
             </div>
         </div>
     </div>
-    <!-- section -->
+    <!-- endsection -->
+
     <?php
     // Footer
     @include("include/footer.php");

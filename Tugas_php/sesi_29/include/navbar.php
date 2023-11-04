@@ -10,14 +10,14 @@
             <li class="nav-item">
               <a class="nav-link active" href="index.php">Home</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Katalog</a>
+            <li class="nav-item">
+              <a class="nav-link" href="page/katalog/index.php">Katalog</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Penerbit</a>
+            <li class="nav-item">
+              <a class="nav-link" href="page/penerbit/index.php">Penerbit</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Pengarang</a>
+            <li class="nav-item">
+              <a class="nav-link" href="page/pengarang/index.php">Pengarang</a>
             </li>
           </ul>
           <form class="d-flex">
