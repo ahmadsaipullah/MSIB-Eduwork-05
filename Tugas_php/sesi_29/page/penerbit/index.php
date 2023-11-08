@@ -72,7 +72,7 @@
     <div class="row">
       <div class="col-md-12">
         <a href="create.php" class="btn btn-primary mb-2">Tambah Penerbit Baru</a>
-        <table class="table table-striped text-center bg-light" border="2">
+        <table id="Table_ID" class="table table-striped">
           <thead class="fw-bold">
             <tr>
               <td>No</td>

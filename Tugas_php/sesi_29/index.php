@@ -45,7 +45,7 @@
         <div class="row">
             <div class="col-md-12">
                 <a href="page/home/create.php" class="btn btn-primary mb-2">Tambah Buku Baru</a>
-                <table class="table table-striped text-center bg-light" border="2">
+                <table id="Table_ID" class="table table-striped">
                     <thead class="fw-bold">
                         <tr>
                             <td>No</td>
