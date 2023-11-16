@@ -1,5 +1,4 @@
 {{-- sidebar --}}
-
 <div id="sidebar" class="active">
     <div class="sidebar-wrapper active">
         <div class="sidebar-header position-relative">
@@ -37,7 +36,7 @@
                         </path>
                     </svg>
                 </div>
-                <div class="sidebar-toggler  x">
+                <div class="sidebar-toggler x">
                     <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
                 </div>
             </div>
@@ -46,25 +45,41 @@
             <ul class="menu">
                 <li class="sidebar-title">Menu</li>
 
-                <li class="sidebar-item active ">
+                <li class="sidebar-item @yield('dashboard') ">
                     <a href="{{ route('dashboard') }}" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item ">
-                    <a href="#" class='sidebar-link'>
+                <li class="sidebar-item @yield('brand') ">
+                    <a href="{{ route('brands.index') }}" class='sidebar-link'>
                         <i class="bi bi-stack"></i>
-                        <span>Data Mahasiswa</span>
+                        <span>Brand</span>
                     </a>
-
+                </li>
+                <li class="sidebar-item @yield('type') ">
+                    <a href="{{ route('types.index') }}" class='sidebar-link'>
+                        <i class="bi bi-stack"></i>
+                        <span>Type</span>
+                    </a>
+                </li>
+                <li class="sidebar-item @yield('katalog')">
+                    <a href="{{ route('katalogs.index') }}" class='sidebar-link'>
+                        <i class="bi bi-stack"></i>
+                        <span>Katalog</span>
+                    </a>
+                </li>
+                <li class="sidebar-item @yield('suplier')">
+                    <a href="{{ route('supliers.index') }}" class='sidebar-link'>
+                        <i class="bi bi-stack"></i>
+                        <span>Suplier</span>
+                    </a>
                 </li>
 
 
-
-                <li class="sidebar-title">Forms &amp; Tables</li>
-
+            </ul>
+            <ul class="menu fixed-bottom mb-5">
                 <li class="sidebar-item">
                     @auth
                         <form action="{{ route('logout') }}" method="post">
@@ -73,7 +88,6 @@
                         </form>
                     @endauth
                 </li>
-
             </ul>
         </div>
     </div>

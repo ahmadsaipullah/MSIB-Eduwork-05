@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\auth\{loginController, registerController};
 use App\Http\Controllers\homeController;
-use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\admin\{dashboardController, brandController, katalogController, suplierController, typeController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +32,13 @@ Route::post('/logout', [loginController::class, 'logout'])->name('logout');
 // register
 Route::get('/register', [registerController::class, 'index'])->name('register');
 Route::post('/register', [registerController::class, 'store'])->name('register.store');
+
+// brands
+Route::resource('/brands', brandController::class);
+// type
+Route::resource('/types', typeController::class);
+// Katalog
+Route::resource('/katalogs', katalogController::class);
+
+// Suplier
+Route::resource('/supliers', suplierController::class);

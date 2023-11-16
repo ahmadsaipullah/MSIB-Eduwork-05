@@ -8,6 +8,7 @@
 
     @include('dashboard.includes.style')
 
+
 </head>
 
 <body>
