@@ -7,6 +7,3 @@
 <link rel="shortcut icon" href="{{ asset('template/assets/images/logo/favicon.png') }}" type="image/png">
 
 <link rel="stylesheet" href="{{ asset('template/assets/css/shared/iconly.css') }}">
-
-{{-- css login --}}
-<link rel="stylesheet" href="{{ asset('template/assets/css/pages/auth.css') }}">

@@ -54,7 +54,7 @@
                 </li>
 
                 <li class="sidebar-item ">
-                    <a href="{{ route('mahasiswa.index') }}" class='sidebar-link'>
+                    <a href="#" class='sidebar-link'>
                         <i class="bi bi-stack"></i>
                         <span>Data Mahasiswa</span>
                     </a>

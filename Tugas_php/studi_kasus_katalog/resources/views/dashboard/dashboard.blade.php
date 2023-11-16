@@ -1,6 +1,5 @@
 {{-- dashboard --}}
-
-@extends('layouts.default')
+@extends('dashboard.layouts.default')
 @section('title', 'Dashboard')
 @section('content')
     <div class="page-content">

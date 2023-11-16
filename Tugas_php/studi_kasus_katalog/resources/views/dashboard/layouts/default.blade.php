@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
 
-    @include('includes.style')
+    @include('dashboard.includes.style')
 
 </head>
 
 <body>
     <div id="app">
 
-        @include('includes.sidebar')
+        @include('dashboard.includes.sidebar')
 
         <div id="main">
             <header class="mb-3">
@@ -28,11 +28,11 @@
 
             @yield('content')
 
-            @include('includes.footer')
+            @include('dashboard.includes.footer')
         </div>
     </div>
 
-    @include('includes.scripct')
+    @include('dashboard.includes.scripct')
 
 </body>
 

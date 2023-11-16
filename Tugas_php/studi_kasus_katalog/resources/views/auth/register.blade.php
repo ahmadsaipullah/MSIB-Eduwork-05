@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    @include('include.style')
+    @include('dashboard.includes.style')
+    <link rel="stylesheet" href="{{ asset('template/assets/css/pages/auth.css') }}">
 </head>
 
 <body>
@@ -14,13 +15,8 @@
         <div class="row h-100">
             <div class="col-lg-5 col-12">
                 <div id="auth-left">
-                    <div class="auth-logo">
-                        <a href="index.html"><img src="{{ asset('template/assets/images/logo/logo.svg') }}"
-                                alt="Logo"></a>
-                    </div>
                     <h1 class="auth-title">Sign Up</h1>
                     <p class="auth-subtitle mb-5">Input your data to register to our website.</p>
-
                     <form method="post" action="{{ route('register.store') }}">
                         @csrf
                         <div class="form-group position-relative has-icon-left mb-4">
