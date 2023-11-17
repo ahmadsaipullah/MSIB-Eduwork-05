@@ -11,3 +11,6 @@
 <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.min.css') }}" type="text/css" />
 <link rel="stylesheet" href="{{ asset('assets/css/slicknav.min.css') }}" type="text/css" />
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" />
+
+<link rel="shortcut icon" href="{{ asset('assets/img/logo_website_shayna.png') }}" type="image/x-icon">
+<link rel="shortcut icon" href="{{ asset('assets/img/logo_website_shayna.png') }}" type="image/png">

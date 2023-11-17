@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('supliers', function (Blueprint $table) {
             $table->id();
-            $table->string('perusahaan');
-            $table->string('email');
+            $table->string('perusahaan')->unique();
+            $table->string('email')->unique();
             $table->string('telp');
             $table->text('alamat');
             $table->string('negara');

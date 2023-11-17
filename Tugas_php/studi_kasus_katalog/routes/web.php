@@ -39,6 +39,5 @@ Route::resource('/brands', brandController::class);
 Route::resource('/types', typeController::class);
 // Katalog
 Route::resource('/katalogs', katalogController::class);
-
 // Suplier
 Route::resource('/supliers', suplierController::class);

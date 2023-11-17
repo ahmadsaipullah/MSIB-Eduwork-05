@@ -48,8 +48,7 @@
                                                             method="post">
                                                             @csrf
                                                             @method('delete')
-                                                            <button class="btn btn-danger"
-                                                                onclick="return confirm('Apakah Anda yakin ingin menghapus data ini')">Delete</button>
+                                                            <button class="btn btn-danger" id="warning">Delete</button>
                                                         </form>
                                                     </div>
                                                 </td>

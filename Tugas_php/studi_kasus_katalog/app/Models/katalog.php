@@ -10,4 +10,9 @@ class katalog extends Model
     use HasFactory;
     protected $lable = 'katalogs';
     protected $fillable = ['nama'];
+
+    public function Product()
+    {
+        return $this->hasMany(Product::class, 'id', 'katalog_id');
+    }
 }
