@@ -39,8 +39,8 @@
                                     </article>
 
                                     <div class="pd-title">
-                                        <span> {{ $product->jenis }} </span>
-                                        <span> {{ $product->size }} </span>
+                                        <span>Kategori: {{ $product->jenis }} </span>
+                                        <span>Size: {{ $product->size }} </span>
 
                                     </div>
 
