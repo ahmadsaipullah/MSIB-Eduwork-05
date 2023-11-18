@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="col-md-8 form-group">
                                     <textarea name="alamat" id="alamat" rows="3"
-                                        class="form-control summernote @error('alamat') is invalid @enderror"{{ old('deskripsi') }} required></textarea>
+                                        class="form-control summernote @error('alamat') is invalid @enderror"{{ old('alamat') }} required></textarea>
                                     @error('alamat')
                                         <div class="alert alert-danger"> {{ $message }} </div>
                                     @enderror

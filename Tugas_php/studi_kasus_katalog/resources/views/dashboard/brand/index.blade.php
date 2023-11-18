@@ -27,7 +27,7 @@
                         <div class="card-body">
                             <!-- Table with outer spacing -->
                             <div class="table-responsive">
-                                <table class="table table-striped">
+                                <table id="dataTables" class="table table-striped">
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -48,7 +48,8 @@
                                                             method="post">
                                                             @csrf
                                                             @method('delete')
-                                                            <button class="btn btn-danger" id="warning">Delete</button>
+                                                            <button class="btn btn-danger"
+                                                                onclick="return confirm('Apakah Anda yakin ingin menghapus data ini')">Delete</button>
                                                         </form>
                                                     </div>
                                                 </td>

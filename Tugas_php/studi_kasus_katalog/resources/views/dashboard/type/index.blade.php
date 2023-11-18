@@ -27,7 +27,7 @@
                         <div class="card-body">
                             <!-- Table with outer spacing -->
                             <div class="table-responsive">
-                                <table class="table table-striped">
+                                <table id="dataTables" class="table table-striped">
                                     <thead>
                                         <tr>
                                             <th>No</th>

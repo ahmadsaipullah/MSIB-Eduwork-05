@@ -27,10 +27,10 @@
                     <div class="col-lg-2 text-right col-md-2">
                         <ul class="nav-right">
                             <li class="cart-icon">
-                                <a href="">Women</a>
+                                <a href="{{ route('halaman.women') }}">Women</a>
                             </li>
                             <li class="cart-icon">
-                                <a href="">Men</a>
+                                <a href="{{ route('halaman.men') }}">Men</a>
                             </li>
                         </ul>
                     </div>

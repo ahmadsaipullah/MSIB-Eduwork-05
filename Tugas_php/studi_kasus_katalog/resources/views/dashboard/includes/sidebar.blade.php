@@ -60,24 +60,28 @@
                 </li>
                 <li class="sidebar-item @yield('type') ">
                     <a href="{{ route('types.index') }}" class='sidebar-link'>
-                        <i class="bi bi-stack"></i>
+                        <i class="bi bi-hexagon-fill"></i>
                         <span>Type</span>
                     </a>
                 </li>
                 <li class="sidebar-item @yield('katalog')">
                     <a href="{{ route('katalogs.index') }}" class='sidebar-link'>
-                        <i class="bi bi-stack"></i>
+                        <i class="bi bi-grid-1x2-fill"></i>
                         <span>Katalog</span>
                     </a>
                 </li>
                 <li class="sidebar-item @yield('suplier')">
                     <a href="{{ route('supliers.index') }}" class='sidebar-link'>
-                        <i class="bi bi-stack"></i>
+                        <i class="bi bi-pen-fill"></i>
                         <span>Suplier</span>
                     </a>
                 </li>
-
-
+                <li class="sidebar-item @yield('product')">
+                    <a href="{{ route('products.index') }}" class='sidebar-link'>
+                        <i class="bi bi-basket-fill"></i>
+                        <span>Product</span>
+                    </a>
+                </li>
             </ul>
             <ul class="menu fixed-bottom mb-5">
                 <li class="sidebar-item">

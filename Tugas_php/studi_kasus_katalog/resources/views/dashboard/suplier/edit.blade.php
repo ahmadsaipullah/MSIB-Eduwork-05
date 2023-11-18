@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="col-md-8 form-group">
                                     <textarea name="alamat" id="alamat" rows="3" class="form-control  @error('alamat') is invalid @enderror"
-                                        required>{{ old('deskripsi') ?? $suplier->alamat }}</textarea>
+                                        required>{{ old('alamat') ?? $suplier->alamat }}</textarea>
                                     @error('alamat')
                                         <div class="alert alert-danger"> {{ $message }} </div>
                                     @enderror

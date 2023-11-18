@@ -44,90 +44,31 @@
             <div class="row">
                 <div class="col-lg-12 mt-5">
                     <div class="product-slider owl-carousel">
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ asset('assets/img/mickey1.jpg') }}" alt="gambar" />
-                                <ul>
-                                    <li class="w-icon active">
-                                        <a href="#"><i class="icon_bag_alt"></i></a>
-                                    </li>
-                                    <li class="quick-view"><a href="product.html">+ Quick View</a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Coat</div>
-                                <a href="#">
-                                    <h5>Mickey Baggy</h5>
-                                </a>
-                                <div class="product-price">
-                                    $14.00
-                                    <span>$35.00</span>
+                        @foreach ($products as $product)
+                            <div class="product-item">
+                                <div class="pi-pic">
+                                    <img src="{{ Storage::url($product->image) }}" alt="gambar" />
+                                    <ul>
+                                        <li class="w-icon active">
+                                            <a href="{{ route('detail.product', $product->id) }}"><i
+                                                    class="icon_bag_alt"></i></a>
+                                        </li>
+                                        <li class="quick-view"><a href="{{ route('detail.product', $product->id) }}">+ Quick
+                                                View</a></li>
+                                    </ul>
+                                </div>
+                                <div class="pi-text">
+                                    <div class="catagory-name">{{ $product->type->nama }}</div>
+                                    <a href="{{ route('detail.product', $product->id) }}">
+                                        <h5>{{ $product->nama_barang }}</h5>
+                                    </a>
+                                    <div class="product-price">
+                                        {{ 'Rp. ' . number_format($product->harga) }}
+                                        {{-- <span>$35.00</span> --}}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ asset('assets/img/products/women-2.jpg') }}" alt="gambar" />
-                                <ul>
-                                    <li class="w-icon active">
-                                        <a href="#"><i class="icon_bag_alt"></i></a>
-                                    </li>
-                                    <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Shoes</div>
-                                <a href="#">
-                                    <h5>Guangzhou sweater</h5>
-                                </a>
-                                <div class="product-price">
-                                    $13.00
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ asset('assets/img/products/women-3.jpg') }}" alt="gambar" />
-                                <ul>
-                                    <li class="w-icon active">
-                                        <a href="#"><i class="icon_bag_alt"></i></a>
-                                    </li>
-                                    <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Towel</div>
-                                <a href="#">
-                                    <h5>Pure Pineapple</h5>
-                                </a>
-                                <div class="product-price">
-                                    $34.00
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ asset('assets/img/products/women-4.jpg') }}" alt="gambar" />
-                                <ul>
-                                    <li class="w-icon active">
-                                        <a href="#"><i class="icon_bag_alt"></i></a>
-                                    </li>
-                                    <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                    <li class="w-icon">
-                                        <a href="#"><i class="fa fa-random"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pi-text">
-                                <div class="catagory-name">Towel</div>
-                                <a href="#">
-                                    <h5>Converse Shoes</h5>
-                                </a>
-                                <div class="product-price">
-                                    $34.00
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
